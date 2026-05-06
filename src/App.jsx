@@ -5,20 +5,23 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import HomePage from './screens/homepage/HomePage'
+import Login from './screens/login/Login'
 import Header from './components/sections/Header'
+import Signup from './screens/signup/signup'
+import Library from './screens/library/Library'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <div>
-      <Header/>
-      <BrowserRouter>
-          <Routes>
-            <Route exact path="/" element={<HomePage/>} />
-          </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter >
+      <Header />
+      <Routes>
+        <Route exact path="/" element={<HomePage />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/library' element={<Library />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

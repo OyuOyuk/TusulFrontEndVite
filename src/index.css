@@ -1,7 +1,61 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-VariableFont.ttf') format('truetype-variations');
+  font-weight: 100 900; /* Tells the browser this one file handles all weights */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('./assets/fonts/Inter/Inter-Italic-VariableFont.ttf') format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Sansation';
+  src: url('./assets/fonts/Sansation/Sansation-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal
+}
+@font-face {
+  font-family: 'Sansation';
+  src: url('./assets/fonts/Sansation/Sansation-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic
+}
+@font-face {
+  font-family: 'Sansation';
+  src: url('./assets/fonts/Sansation/Sansation-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal
+}
+@font-face {
+  font-family: 'Sansation';
+  src: url('./assets/fonts/Sansation/Sansation-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic
+}
+@font-face {
+  font-family: 'Sansation';
+  src: url('./assets/fonts/Sansation/Sansation-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal
+}
+@font-face {
+  font-family: 'Sansation';
+  src: url('./assets/fonts/Sansation/Sansation-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic
+}
+
+
 :root {
+  min-height: 100vh;
   --text: white;
-  --bg2: #41225C;
-  --bg: #34194B;
+  --textWbg: #543862;
+  --text2Wbg: #7e5d8f;
+  --bg: #41225C;
+  --bg2: #34194B;
   --brand1: #7C3AED;
   --brand2: #3B82F6;
   --stroke: #A78BFA;
@@ -18,7 +72,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  overscroll-behavior: none;
   @media (max-width: 1024px) {
     font-size: 16px;
   }

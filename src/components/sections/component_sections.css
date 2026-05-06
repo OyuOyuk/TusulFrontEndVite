@@ -1,11 +1,14 @@
 .Header{
-    background-color: var(--bg2);
+    background-color: var(--bg);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 24px;
+    height: 36px;
     border-bottom: 1px solid var(--stroke);
-
+    position:sticky;
+    z-index: 1000;
+    top: 0;
 }
 .HeaderLogo{
     width: 15%;

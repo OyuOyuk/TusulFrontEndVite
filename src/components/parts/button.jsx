@@ -1,8 +1,8 @@
 import './component_parts.css'
 
-function Button({text}){
+function Button({text, onClick}){
     return <div>
-        <button className="button">{text}</button>
+        <button className="button" onClick={onClick}>{text}</button>
     </div>
 }
 export default Button

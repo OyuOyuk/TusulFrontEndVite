@@ -1,0 +1,73 @@
+.signup_container{
+    background-image: url('../../assets/bg_images/signup.jpg');
+    background-size: cover;
+    height: 88vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.signup_container2{
+
+    height: 86vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.signup_island{
+    background-color:white;
+    padding: 2rem;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px
+}
+.signup_header2 { /* This is the class on your h1 now */
+    font-family: 'Sansation', sans-serif;
+    color: var(--textWbg);
+    
+    margin: 0; 
+    padding-bottom: 0.5rem; /* Add only the exact space you want below it */
+    
+    line-height: 1.2; 
+}
+.signup_header3{
+    font-family: 'Sansation', sans-serif;
+    color: var(--text2Wbg);
+    font-weight: 400;
+}
+
+.signup_form { 
+    display: flex; 
+    flex-direction: column; 
+    /* This is the space BETWEEN the Email block and Password block */
+    gap: 1.5rem; 
+}
+
+.input_group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    /* This is the tiny space between Label and Input */
+    gap: 0.3rem; 
+}
+
+.signup_form_label {
+    font-family: 'Inter', sans-serif;
+    color: var(--textWbg);
+    font-size: 0.9rem; /* Using rem is better than 'medium' */
+    font-weight: 500;
+}
+.signup_form_input { 
+    width: 100%;
+    padding: 12px; 
+    box-sizing: border-box;
+    border-radius:10px; 
+    border: 1px solid #ccc; 
+}

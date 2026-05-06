@@ -1,5 +1,6 @@
 import BrandBook from '../../assets/BrandBook.svg'
-import './component_parts.css'
+import Button from '../parts/button';
+import './component_sections.css'
 
 
 function Header(){
@@ -7,6 +8,7 @@ function Header(){
     return (
         <header className="Header">
             <img src={BrandBook} alt="Logo" className="HeaderLogo" />
+            <Button text="Login" />
         </header>
     );
 }

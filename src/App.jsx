@@ -5,7 +5,7 @@ import heroImg from './assets/hero.png'
 import './App.css'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import HomePage from './screens/homepage/HomePage'
-import Header from './components/parts/Header'
+import Header from './components/sections/Header'
 
 function App() {
   const [count, setCount] = useState(0)

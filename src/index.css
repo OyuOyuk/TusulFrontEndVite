@@ -1,5 +1,10 @@
 :root {
-  --bg: #41225C;
+  --text: white;
+  --bg2: #41225C;
+  --bg: #34194B;
+  --brand1: #7C3AED;
+  --brand2: #3B82F6;
+  --stroke: #A78BFA;
   --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
   --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
   --mono: ui-monospace, Consolas, monospace;

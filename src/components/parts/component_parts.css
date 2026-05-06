@@ -1,13 +1,19 @@
-.Header{
-    background-color: var(--bg);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 16px;
-}
-.HeaderLogo{
-    width: 15%;
+.button{
+    width: fit-content;
     height: auto;
-    border-bottom: 1px ;
+    padding: 12px 24px;
+    color: var(--text);
+    background-image: linear-gradient(to right, var(--brand1), var(--brand2));
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.1s ease, opacity 0.2s ease;
+    box-shadow: none;
+    outline: none;
+}
 
+.button:active {
+    transform: scale(0.96);
+    opacity: 0.9;
 }

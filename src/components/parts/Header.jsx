@@ -4,8 +4,10 @@ import './component_parts.css'
 
 function Header(){
 
-    return <div className="Header">
-        <img src={BrandBook} alt="" />
-    </div>
+    return (
+        <header className="Header">
+            <img src={BrandBook} alt="Logo" className="HeaderLogo" />
+        </header>
+    );
 }
 export default Header;

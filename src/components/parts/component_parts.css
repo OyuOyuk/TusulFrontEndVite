@@ -1,3 +1,13 @@
 .Header{
     background-color: var(--bg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px;
+}
+.HeaderLogo{
+    width: 15%;
+    height: auto;
+    border-bottom: 1px ;
+
 }

@@ -115,7 +115,7 @@ function Signup(){
                                 Already have an account? <Link to="/login" className="signup_link">Login</Link>
                             </p>
                             <p className='textp'> or </p>
-                            <button onClick={() => window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/google`}>
+                            <button onClick={() => window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/google`}className = 'google_btn'>
                                     Continue with Google
                                 </button>
                         </>

@@ -67,7 +67,7 @@ function Login(){
                         Don't have an account? <Link to="/signup" className="signup_link">Sign up</Link>
                     </p>
                     <p className='textp'>or</p>
-                    <button onClick={() => window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/google`}>
+                    <button onClick={() => window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/google`} className = 'google_btn'>
                         Continue with Google
                     </button>
                 </div>

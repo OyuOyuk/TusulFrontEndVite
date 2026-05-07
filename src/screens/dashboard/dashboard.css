@@ -41,7 +41,7 @@
     color: var(--text);
     font-weight: 700;
     font-size: 0.9rem;
-    background-color: var(--brand1);
+    background-color: var(--bg);
     padding: 12px 24px;
     border-radius: 12px;
     border: 1.5px solid rgba(255,255,255,0.2);

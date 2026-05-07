@@ -9,6 +9,7 @@ import Login from './screens/login/Login'
 import Header from './components/sections/Header'
 import Signup from './screens/signup/signup'
 import Library from './screens/library/Library'
+import Dashboard from './screens/dashboard/dashboard'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/library' element={<Library />} />
+        <Route path='/dashboard' element={<Dashboard/>} />
       </Routes>
     </BrowserRouter>
   )

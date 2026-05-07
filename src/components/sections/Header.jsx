@@ -11,7 +11,7 @@ function Header(){
         <header className="Header">
             <img src={BrandBook} alt="Logo" className="HeaderLogo" onClick={() => navigate('/')} />
             
-            {location.pathname !== '/login' && location.pathname !== '/signup' && (
+            {location.pathname !== '/login' && location.pathname !== '/signup'&&  location.pathname !== '/dashboard' && (
                 <Button text="Login" onClick={() => navigate('/login')}/>
             )}
         </header>

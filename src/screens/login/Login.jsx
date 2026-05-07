@@ -1,15 +1,36 @@
 import './Login.css'
 import { useState } from 'react'
 import Button2 from '../../components/parts/button2'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 function Login(){
+    const navigate = useNavigate(); 
+
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        console.log("Logging in with:", email, password);
-        // Add login logic here
+        console.log('attempting login')
+
+        try {
+            const response = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/loginByEmail`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+            
+            if (!response.ok) throw new Error(data.message);
+            
+            localStorage.setItem("token", data.token);
+            navigate("/dashboard");
+            
+        } catch (error) {
+            console.error("Login failed:", error);
+        }
     };
 
     return (

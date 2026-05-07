@@ -44,7 +44,7 @@
     margin: 0; 
     padding-bottom: 0.5rem; /* Add only the exact space you want below it */
     
-    line-height: 1.2; 
+    line-height: 1; 
 }
 .login_header3{
     font-family: 'Sansation', sans-serif;

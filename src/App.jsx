@@ -10,6 +10,7 @@ import Header from './components/sections/Header'
 import Signup from './screens/signup/signup'
 import Library from './screens/library/Library'
 import Dashboard from './screens/dashboard/dashboard'
+import AuthCallback from './screens/auth/callback'
 
 function App() {
 
@@ -22,6 +23,8 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/library' element={<Library />} />
         <Route path='/dashboard' element={<Dashboard/>} />
+        <Route path="/auth/callback" element={<AuthCallback />} />
+
       </Routes>
     </BrowserRouter>
   )

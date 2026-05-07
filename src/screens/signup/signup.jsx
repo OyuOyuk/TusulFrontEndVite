@@ -109,10 +109,15 @@ function Signup(){
                                 </div>
                                 {error && <p className="signup_error">{error}</p>}
                                 <Button2 text={loading ? "Sending..." : "Sign Up"} onClick={handleSignup} />
+                                
                             </form>
                             <p className="signup_text">
                                 Already have an account? <Link to="/login" className="signup_link">Login</Link>
                             </p>
+                            <p className='textp'> or </p>
+                            <button onClick={() => window.location.href = `${import.meta.env.VITE_API_URL}/api/auth/google`}>
+                                    Continue with Google
+                                </button>
                         </>
                     ) : (
                         <>

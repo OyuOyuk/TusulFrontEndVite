@@ -7,7 +7,12 @@
     align-items: center;
     flex-direction: row;
 }
-
+.textp{
+    font-family: 'Inter', sans-serif;
+    color: var(--textWbg);
+    font-size: 0.75rem;
+    line-height: 0.9rem;
+}
 .signup_container2{
 
     height: 86vh;
@@ -20,7 +25,7 @@
 
 .signup_island{
     background-color:white;
-    padding: 2rem;
+    padding: 1.5rem;
     height: auto;
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
@@ -39,6 +44,7 @@
 .signup_header3{
     font-family: 'Sansation', sans-serif;
     color: var(--text2Wbg);
+    font-size: 0.9rem;
     font-weight: 400;
 }
 
@@ -46,7 +52,7 @@
     display: flex; 
     flex-direction: column; 
     /* This is the space BETWEEN the Email block and Password block */
-    gap: 1.5rem; 
+    gap: 1rem; 
 }
 
 .input_group {
@@ -61,12 +67,12 @@
 .signup_form_label {
     font-family: 'Inter', sans-serif;
     color: var(--textWbg);
-    font-size: 0.9rem; /* Using rem is better than 'medium' */
+    font-size: 0.8rem; /* Using rem is better than 'medium' */
     font-weight: 500;
 }
 .signup_form_input { 
     width: 100%;
-    padding: 12px; 
+    padding: 10px; 
     box-sizing: border-box;
     border-radius:10px; 
     border: 1px solid #ccc; 

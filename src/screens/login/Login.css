@@ -52,7 +52,7 @@
     
     margin: 0; 
     padding-bottom: 0.5rem; /* Add only the exact space you want below it */
-    
+    font-size: 2.5rem;
     line-height: 1; 
 }
 .login_header3{

@@ -1,0 +1,260 @@
+.dashboard-container {
+    
+    background-image: linear-gradient(135deg, var(--brand1), var(--brand2));
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 2rem 4rem;
+    overflow-y: auto;
+}
+
+/* ── Top greeting ── */
+.dashboard-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.dashboard_header1 {
+    font-family: 'Sansation', sans-serif;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.dashboard_header2 {
+    font-family: 'Sansation', sans-serif;
+    color: var(--text);
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0.3rem 0 0;
+    opacity: 0.75;
+}
+
+.dashboard_cta_btn {
+    font-family: 'Sansation', sans-serif;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 0.9rem;
+    background-color: var(--brand1);
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(255,255,255,0.2);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: opacity 0.2s, transform 0.15s;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.dashboard_cta_btn:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+}
+
+/* ── Library section ── */
+.dashboard-library-header {
+    font-family: 'Sansation', sans-serif;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0 0 1rem;
+    opacity: 0.9;
+    letter-spacing: 0.02em;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.2rem;
+}
+
+/* ── Brand book card ── */
+.bb-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    animation: card_fadein 0.4s ease forwards;
+    opacity: 0;
+}
+
+.bb-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+}
+
+@keyframes card_fadein {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.bb-card:nth-child(1) { animation-delay: 0.05s; }
+.bb-card:nth-child(2) { animation-delay: 0.1s; }
+.bb-card:nth-child(3) { animation-delay: 0.15s; }
+.bb-card:nth-child(4) { animation-delay: 0.2s; }
+.bb-card:nth-child(5) { animation-delay: 0.25s; }
+.bb-card:nth-child(6) { animation-delay: 0.3s; }
+
+.bb-card-name {
+    font-family: 'Sansation', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--textWbg);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.bb-card-date {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.68rem;
+    color: var(--text2Wbg);
+    margin: 0;
+}
+
+.bb-palette-strip {
+    display: flex;
+    gap: 5px;
+}
+
+.bb-swatch {
+    flex: 1;
+    height: 28px;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.bb-card-meta {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.bb-tag {
+    padding: 3px 9px;
+    border-radius: 20px;
+    background: #f2f2f2;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--textWbg);
+    text-transform: capitalize;
+}
+
+.bb-tag.mood {
+    background: var(--textWbg);
+    color: white;
+}
+
+.bb-tag.era {
+    background: var(--brand2);
+    color: white;
+}
+
+.bb-card-typo {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    color: var(--text2Wbg);
+    line-height: 1.5;
+}
+
+.bb-edits {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.65rem;
+    color: var(--text2Wbg);
+    padding-top: 0.3rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.bb-edits span {
+    font-weight: 700;
+    color: var(--textWbg);
+}
+
+/* ── Empty state ── */
+.dashboard-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem;
+    background: rgba(255,255,255,0.08);
+    border-radius: 16px;
+    border: 1.5px dashed rgba(255,255,255,0.25);
+    text-align: center;
+}
+
+.dashboard-empty p {
+    font-family: 'Sansation', sans-serif;
+    color: var(--text);
+    opacity: 0.7;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.dashboard-empty-btn {
+    font-family: 'Sansation', sans-serif;
+    color: var(--text);
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: rgba(255,255,255,0.15);
+    padding: 10px 24px;
+    border-radius: 10px;
+    border: 1.5px solid rgba(255,255,255,0.25);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.dashboard-empty-btn:hover {
+    background: rgba(255,255,255,0.25);
+}
+
+/* ── Loading skeletons ── */
+.bb-skeleton {
+    background: rgba(255,255,255,0.85);
+    border-radius: 16px;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.bb-skel-line {
+    background: linear-gradient(90deg, #eee 25%, #f5f5f5 50%, #eee 75%);
+    background-size: 200% 100%;
+    border-radius: 6px;
+    animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ── Error banner ── */
+.dashboard-error {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.8rem;
+    color: #e53e3e;
+    background: #fff5f5;
+    border: 1px solid #fcc;
+    border-radius: 10px;
+    padding: 10px 14px;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+    .dashboard-container { padding: 2rem 1rem 3rem; }
+    .dashboard_header1   { font-size: 1.5rem; }
+    .dashboard-grid      { grid-template-columns: 1fr; }
+}

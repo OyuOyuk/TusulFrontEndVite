@@ -143,3 +143,26 @@ code {
   line-height: 135%;
   padding: 4px 8px;
 }
+/* General App Layout */
+.app-layout {
+  display: flex;
+  min-height: calc(100vh - 60px); /* Adjust based on header height */
+  margin-top: 60px; /* Push content down below fixed header */
+}
+
+.app-main-content {
+  flex-grow: 1;
+  transition: margin-left 0.3s ease-in-out; /* Smooth transition for content shift */
+  /* No padding here, let the individual screen components manage their padding */
+}
+
+/* Adjust main content margin based on sidebar state */
+.app-main-content.sidebar-open {
+  margin-left: 220px; /* Same as open sidebar width */
+}
+
+.app-main-content.sidebar-closed {
+  margin-left: 60px; /* Same as closed sidebar width */
+}
+
+/* Ensure header is fixed and on top */

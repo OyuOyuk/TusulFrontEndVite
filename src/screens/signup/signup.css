@@ -1,11 +1,19 @@
 .signup_container{
     background-image: url('../../assets/bg_images/signup.jpg');
     background-size: cover;
-    height: 88vh;
+    height: 90vh;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: row;
+}
+@media (max-width: 1024px) {
+    .signup_container {
+        justify-content: center;
+    }
+    .signup_container2 {
+        width: 90vw;
+    }
 }
 .textp{
     font-family: 'Inter', sans-serif;

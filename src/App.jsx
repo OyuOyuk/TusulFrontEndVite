@@ -11,21 +11,29 @@ import Signup from './screens/signup/signup'
 import Library from './screens/library/Library'
 import Dashboard from './screens/dashboard/dashboard'
 import AuthCallback from './screens/auth/callback'
+import Settings from './screens/settings/settings'
+import Generate from './screens/generate/generate'
 
 function App() {
 
   return (
     <BrowserRouter >
+    
       <Header />
-      <Routes>
+      
+      <main style={{}}>
+        <Routes>
         <Route exact path="/" element={<HomePage />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/library' element={<Library />} />
+        <Route path='/settings' element={<Settings />} />
         <Route path='/dashboard' element={<Dashboard/>} />
+        <Route path='/generate' element={<Generate/>} />
         <Route path="/auth/callback" element={<AuthCallback />} />
 
       </Routes>
+      </main>
     </BrowserRouter>
   )
 }

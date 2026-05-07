@@ -1,16 +1,32 @@
-.Header{
-    background-color: var(--bg);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 24px;
-    height: 36px;
-    position:sticky;
-    z-index: 1000;
+.Header {
+    position: fixed;
     top: 0;
-}
-.HeaderLogo{
-    width: 15%;
-    height: auto;
+    left: 0;
+    right: 0;
+    height: 70px;
     
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 1000;
+
+    /* Glass effect */
+    background-color: rgba(71, 26, 94, 0.8);
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* Subtle border instead of a heavy shadow */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.HeaderLogo {
+    height: 32px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.HeaderLogo:hover {
+    transform: scale(1.05); /* Small responsive feedback on hover */
 }

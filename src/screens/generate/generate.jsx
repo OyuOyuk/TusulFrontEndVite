@@ -1,4 +1,4 @@
-import './Generate.css'
+import './generate.css'
 import { useState, useRef } from 'react'
 
 const STEPS = [

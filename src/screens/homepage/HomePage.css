@@ -1,15 +1,216 @@
-.HomePageBG{
-    width: 100%;
+/* ── Root ── */
+.hp-root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
 }
-.heroimg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    max-height: 100vh;
-    width: 100%;
+
+/* ── Hero ── */
+.hp-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
-.HeroPart1{
-    width: 50%;
-    height: 150vh;
+
+.hp-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.hp-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(26, 10, 40, 0.92) 0%,
+    rgba(41, 22, 62, 0.78) 50%,
+    rgba(65, 34, 92, 0.45) 100%
+  );
+  z-index: 1;
+}
+
+.hp-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 8vw;
+  max-width: 680px;
+  text-align: left;
+}
+
+.hp-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #A78BFA;
+  margin: 0 0 20px;
+}
+
+.hp-title {
+  font-family: 'Sansation', sans-serif;
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #fff;
+  margin: 0 0 20px;
+}
+
+.hp-title-accent {
+  color: #A78BFA;
+}
+
+.hp-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.6;
+  margin: 0 0 40px;
+  max-width: 480px;
+}
+
+/* ── CTA Button ── */
+.hp-cta {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 14px 36px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background: var(--brand1);
+  color: #fff;
+  transition: opacity 0.2s, transform 0.15s;
+  letter-spacing: 0.02em;
+}
+
+.hp-cta:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+.hp-cta--outline {
+  background: transparent;
+  border: 2px solid rgba(167, 139, 250, 0.6);
+  color: #fff;
+}
+
+.hp-cta--outline:hover {
+  background: rgba(167, 139, 250, 0.12);
+  opacity: 1;
+}
+
+/* ── How it works ── */
+.hp-steps {
+  background: var(--bg2);
+  padding: 80px 8vw;
+  text-align: left;
+}
+
+.hp-steps-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #A78BFA;
+  margin: 0 0 48px;
+}
+
+.hp-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
+}
+
+.hp-step-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(167, 139, 250, 0.18);
+  border-radius: 16px;
+  padding: 32px 28px;
+  transition: border-color 0.2s;
+}
+
+.hp-step-card:hover {
+  border-color: rgba(167, 139, 250, 0.4);
+}
+
+.hp-step-num {
+  font-family: 'Sansation', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: rgba(167, 139, 250, 0.25);
+  display: block;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.hp-step-title {
+  font-family: 'Sansation', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 10px;
+}
+
+.hp-step-body {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Bottom banner ── */
+.hp-banner {
+  background: var(--bg);
+  padding: 80px 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  border-top: 1px solid rgba(167, 139, 250, 0.15);
+}
+
+.hp-banner-title {
+  font-family: 'Sansation', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+}
+
+.hp-banner-sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 480px;
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .hp-hero-content {
+    padding: 0 6vw;
+    padding-top: 80px;
+  }
+
+  .hp-steps {
+    padding: 56px 6vw;
+  }
+
+  .hp-banner {
+    padding: 56px 6vw;
+  }
 }

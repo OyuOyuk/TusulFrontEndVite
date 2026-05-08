@@ -7,7 +7,15 @@
     align-items: center;
     padding: 2rem 1rem;
 }
+.gen_result_actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.4rem;
+}
 
+.gen_dashboard_link {
+    color: var(--textWbg);
+}
 .generate_island {
     background-color: white;
     padding: 2rem;

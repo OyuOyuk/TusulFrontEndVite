@@ -125,7 +125,7 @@ function Dashboard() {
             
             {/* ── Greeting + CTA ── */}
             <div className="dashboard-top">
-                <div>
+                <div>0
                     <h1 className="dashboard_header1">
                         {getGreeting()}{user?.email ? `, ${user.email.split('@')[0]}` : ''}!
                     </h1>

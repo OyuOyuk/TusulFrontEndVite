@@ -1,6 +1,6 @@
 import './generate.css'
 import { useState, useRef } from 'react'
-
+import { useNavigate } from 'react-router-dom'
 const STEPS = [
     { label: 'Company' },
     { label: 'Personality' },
@@ -9,6 +9,9 @@ const STEPS = [
 ]
 
 function Generate() {
+
+    const navigate = useNavigate()
+    
     const [step, setStep] = useState(0)
 
     // Form state
@@ -245,9 +248,14 @@ function Generate() {
                             </div>
                         )}
 
-                        <button className="gen_reset_link" onClick={reset}>
-                            Generate another →
-                        </button>
+                        <div className="gen_result_actions">
+                            <button className="gen_reset_link" onClick={reset}>
+                                Generate another →
+                            </button>
+                            <button className="gen_reset_link gen_dashboard_link" onClick={() => navigate('/dashboard')}>
+                                Back to Dashboard →
+                            </button>
+                        </div>
                     </div>
                 )}
 

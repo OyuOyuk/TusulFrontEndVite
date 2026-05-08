@@ -65,7 +65,7 @@
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
-  color-scheme: light dark;
+  color-scheme: only light;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
@@ -78,13 +78,6 @@
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  
-
-  #social .button-icon {
-    filter: invert(1) brightness(2);
-  }
-}
 
 body {
   margin: 0;
